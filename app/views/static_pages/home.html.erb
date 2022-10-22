@@ -1,0 +1,4 @@
+<%= form_with url: "/fetch_photos", method: :get do |form| %>
+  <%= form.text_field :user_id, placeholder: "Flickr User ID" %>
+  <%= form.submit "Fetch Photos" %>
+<% end %>
