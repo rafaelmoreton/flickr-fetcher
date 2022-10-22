@@ -1,4 +1,10 @@
-<%= form_with url: "/fetch_photos", method: :get do |form| %>
+<%= form_with url: "/home", method: :get do |form| %>
   <%= form.text_field :user_id, placeholder: "Flickr User ID" %>
   <%= form.submit "Fetch Photos" %>
+<% end %>
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+      <%= image_tag "https://live.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg"%>
+  <% end %>
 <% end %>

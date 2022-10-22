@@ -1,9 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-  end
-
-  def fetch_photos
     flickr = Flickr.new
-    @photos = flickr.people.getPublicPhotos({ user_id: params[:user_id] })
+    
+    @photos = flickr.people.getPublicPhotos({ user_id: params[:user_id] }) if params[:commit]
   end
 end
