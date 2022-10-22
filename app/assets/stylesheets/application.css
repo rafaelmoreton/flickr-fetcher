@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+    --main-color: #ecc1a1;
+    --second-color: #dac8be;
+    --dark-color: #58626c;
+    --light-color: #f5f1ee;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.photo-grid {
+    --photo-border-size: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc(500px + var(--photo-border-size) * 2));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(500px + var(--photo-border-size) * 2);
+    height: 100%;
+    background-color: var(--dark-color);
+}
+
+.photo-item > div > img {
+    display: block;
+    border: var(--photo-border-size) solid var(--second-color);
+}
