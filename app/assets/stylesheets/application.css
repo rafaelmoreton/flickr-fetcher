@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
     --main-color: #ecc1a1;
     --second-color: #dac8be;
@@ -22,7 +24,21 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     background-color: var(--main-color);
+}
+
+.user-id-form {
+    position: sticky;
+    top: 0px;
+    margin-bottom: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 30px;
+    background-color: var(--second-color);
+    box-shadow: 0px 1px 5px var(--dark-color);
 }
 
 .photo-grid {
