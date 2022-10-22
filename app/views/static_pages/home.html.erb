@@ -1,6 +1,10 @@
 <%= form_with url: "/home", method: :get, class: "user-id-form" do |form| %>
-  <%= form.text_field :user_id, placeholder: "Flickr User ID" %>
+  <%= form.text_field :user_id, placeholder: "Flickr User ID", value: params[:user_id] %>
   <%= form.submit "Fetch Photos" %>
+<% end %>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: name %>
 <% end %>
 
 <div class="photo-grid">
